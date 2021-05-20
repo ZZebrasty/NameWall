@@ -1,2 +1,3 @@
 # NameWall
-Blogi
+BLOGI
+OTO COŚ
