@@ -1,4 +1,15 @@
- <!DOCTYPE html>
+ <?php
+ 
+    session_start();
+     
+    if (!isset($_SESSION['zalogowany']))
+    {
+        header('Location: index.php');
+        exit();
+    }
+     
+?>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
   <title>NameWall</title>
@@ -12,7 +23,20 @@
   h1 {color: red;}
   p {color: blue;}
 </style> 
+ <?php
+ 
+    $host = "localhost";
+    $db_user = "root";
+    $db_password = "";
+    $db_name = "namewall";
+ 
+?>
 <body>
+ <?php
+
+     echo "<p>Witaj ".$_SESSION['user'].'! [ <a href="logout.php">Wyloguj się!</a> ]</p>
+ 
+ ?>
 
 TEST TEST
 
